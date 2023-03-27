@@ -20,18 +20,18 @@ test.describe("playwright.dev", () => {
 
 })
 
-test.describe("dotlife.store", () => {
-  test.beforeEach(async ({ page },testInfo) => {
+test.describe("istudio.store", () => {
+  test.beforeEach(async ({ page }, testInfo) => {
     // Go to the starting url before each test.
-    await page.goto("https://www.dotlife.store/");
+    await page.goto("https://www.istudio.store/");
   });
 
 
   test('menu link', async ({ page }) => {
     // click to the menu
-    const link = page.getByRole('link', { name: 'Category: SmartWatch. 8 sub-categories' })
+    const link = page.getByRole('link', { name: 'Category: iPhone. 10 sub-categories' })
     await link.click();
     //expects the url
-    await expect(page).toHaveURL(/.*smartwatch.html/)
+    await expect(page).toHaveURL(/.*iphone.html/)
   })
 });
