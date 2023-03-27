@@ -29,6 +29,6 @@ test.describe("navigation", () => {
     await page.getByRole('link', { name: 'Category: SmartWatch. 8 sub-categories' }).click();
 
     //expects the url
-    await expect(page).toHaveURL(/smartwatch.html/)
+    await expect(page).toHaveURL(/.*smartwatch.html/)
   })
 });
