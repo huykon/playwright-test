@@ -20,18 +20,18 @@ test.describe("playwright.dev", () => {
 
 })
 
-test.describe("istudio.store", () => {
+test.describe("dotlife.store", () => {
   test.beforeEach(async ({ page }, testInfo) => {
     // Go to the starting url before each test.
-    await page.goto("https://www.istudio.store/");
+    await page.goto("https://dictionary.cambridge.org/");
   });
 
 
   test('menu link', async ({ page }) => {
     // click to the menu
-    const link = page.getByRole('link', { name: 'Category: iPhone. 10 sub-categories' })
+    const link = page.getByRole('link', { name: 'Dictionary', exact: true })
     await link.click();
     //expects the url
-    await expect(page).toHaveURL(/.*iphone.html/)
+    await expect(page).toHaveURL(/.*dictionary/)
   })
 });
