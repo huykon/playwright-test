@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test:ui": "playwright test --ui",
     "test:watch": "playwright-watch test",
     "test:e2e": "playwright test --config=playwright.config.ts",
     "test:e2e:watch": "chokidar 'tests/e2e/**/*.test.ts' -c 'npm run test:e2e -- --retries=0 {path}'"
